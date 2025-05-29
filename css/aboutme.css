@@ -1,0 +1,357 @@
+/*通用*/
+ul{
+    padding-inline-start: 0;
+
+}
+
+ul li{
+    list-style: none;
+    width: 80%;
+    margin: 2% 0 4%;
+}
+
+ul li p{
+    margin-top: 1%;
+}
+
+.line{
+    border-right: solid 1px #ebebeb;
+    height: 9%;
+}
+
+section{
+    padding: 2% 0 2% 0;   
+
+}
+
+/*header*/
+.header_whole{
+    width: auto;
+    margin-bottom:3%;
+}
+
+.brief{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+}
+
+
+.brief_left{
+    margin: 6% 0;
+    width:50%;
+    max-width: 50%;
+    height: auto;
+
+}
+
+.brief_left img{
+    max-width: 100%;
+    border-radius: 0.3em;
+}
+
+.brief_right{
+    width: 44%;
+    max-width: 50%;
+    align-self: center;
+    height: auto;
+
+}
+
+.brief_right span{
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.brief_right p{
+    width: 90%;
+    margin: 5% 0 10%;
+    font-weight: 200;  
+    font-size:1.1em;
+}
+
+.brief_right a{
+    background-color: #7dd62c;
+    color: #fff;
+    padding: 3% 10%;
+    font-size: 1em;
+    border: none;
+    border-radius: 0.18em;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+/*技能的标题、技能和图片*/
+ul li span,h2{
+    font-size:1.3em;
+    font-weight: 600;
+}
+
+.tool_pic_gallery{
+    margin-top: 1%;
+}
+
+.tool_pic_gallery img{
+    width: 5%;
+    margin-right: 2%;
+    border-radius: 0.1em;
+}
+
+ul li h4{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+ul li h4 span{
+    font-size: 1em;
+    margin-right: 6%;
+    font-weight: 600;
+}
+
+ul li .work_detail{
+    margin-top:-1%;
+    font-size: 1em;
+}
+
+.work_detail a{
+    color:#3e3e3e;
+    font-size: 1em;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.education .phone_break{
+    font-size: 1.06em;
+    font-weight: 500;
+}
+
+.hobby ul{
+    margin-top: 8%;
+}
+
+.hobby ul li{
+    display: inline;
+    background-color: #fff;
+    padding: 2% 3%;
+    border-radius: 0.2em;
+    margin-right: 3%;
+}
+
+.abme_footer{
+    margin: 0;
+    padding: 3% 0 2% 0;
+
+}
+
+@media(min-width:1200px){
+    .brief_left{
+        width:44%;
+        max-width: 44%;
+    }
+
+    .brief_right{
+        width: 50%;
+        max-width: 50%;
+    }
+
+    .tool_pic_gallery img{
+        width: 3%;
+    }
+
+    .hobby ul{
+        margin-top: 5%;
+    }
+}
+
+
+@media(min-width:1920px){
+    .brief_left{
+        width:40%;
+        max-width: 40%;
+    }
+
+    .brief_right{
+        width: 55%;
+        max-width: 55%;
+    }
+
+    .brief_right p{
+        font-size: 1.2em;
+        font-weight: lighter;
+    }
+
+    .brief_right button{
+        background-color: #7dd62c;
+        color: #fff;
+        padding: 3% 8%;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 0.18em;
+        cursor: pointer;
+        outline: none;
+    }
+
+    ul li{
+        margin: 4% 0 5%;
+        margin-left: 5%;
+    }
+
+
+    .hobby ul li{
+        font-size: 1.1em;
+        font-weight: 300;
+    }
+
+    .tool_pic_gallery img{
+        width: 3%;
+    }
+}
+
+@media(max-width:480px){
+    /* nav */
+    .dropbtn{
+        background-color: #fff;
+        text-align: right;
+    }
+
+    /*通用*/
+    ul{
+        padding-inline-start: 0;
+    }
+
+    ul li{
+    width: 100%;
+    margin: 0 0 20%;
+    font-size: 1.2em;
+    }
+
+    p{
+        width: 100%;
+        line-height: 1.4;
+        margin: 4% 0;
+        font-size: 0.8em;
+    }
+
+    .brief{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .brief_left{
+        margin: 6% 0;
+        width:100%;
+        max-width: 100%;
+        height: auto;
+    
+    }
+    
+    .brief_left img{
+        max-width: 100%;
+        border-radius: 0.3em;
+    
+    }
+    
+    .brief_right{
+        width: 44%;
+        max-width: 44%;
+        height: auto;
+        margin-top: 6%;
+    }
+
+    .brief_right{
+        width: 100%;
+        max-width: 100%;
+        align-self: center;
+        height: auto;
+    
+    }
+    
+    .brief_right span{
+        display: block;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+    
+    .brief_right p{
+        font-size: 1em; 
+        line-height: 1.5;
+        width: 100%;
+    }
+
+    .brief_right a{
+        text-align: center;
+        width:26%;
+        padding: 4% 10%;
+        font-size: 1em;
+        display: block;/*先成一块*/
+        margin: 2% auto 10%;/*再让按钮水平居中*/ 
+    }
+
+    ul li h4, ul li h4 span{
+
+        font-size:0.9em;
+        display: block;
+        margin: 4% 0%;
+        font-weight: 400;
+    }
+
+    ul li .work_detail{
+        margin: 4% 0 20%;
+        font-size: 0.8em;
+
+    }
+    
+    .tool_pic_gallery img{
+        width: 5%;
+        margin-right: 2%;
+        border-radius: 0.1em;
+    }
+
+    .tool_pic_gallery img{
+        width: 8%;
+    }
+
+    .experient h2{
+        font-size: 1.1em;
+        margin-bottom: 0;
+    }
+    
+    ul li span, h2{
+        font-size: 0.9em;
+    }
+
+   .education h4{
+        font-size: 0.8em;
+    }
+
+    .education .phone_break{
+        display: block;
+        margin-bottom: 2.4%;
+        font-size: 1.06em;
+        font-weight: 500;
+    }
+
+    .contact .contact_space{
+        display: block;
+        margin-bottom: 2.4%;
+        font-size: 1em;
+        font-weight: 100;
+    }
+
+    .hobby ul{
+        margin-top: 8%;
+    }
+    
+    .hobby ul li{
+        display: inline-blcok;
+        padding: 2%;
+        background-color: #fff;
+        font-size: 1em;
+        margin-bottom:4%;
+    }
+
+}
+

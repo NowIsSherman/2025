@@ -1,0 +1,646 @@
+/*some individual style*/
+.extra_top{
+    margin-top: 4%;
+}
+
+.extra_top2{
+    margin-top: 8%;
+}
+
+.bg_white{
+    background-color: #fff;
+}
+
+.frist_one{
+    margin: 6% 0 10% 0;
+}
+
+.frist_one img{
+    margin-top: 1%;
+}
+
+.last_one{
+    margin: 10% 0 0% 0 ;
+}
+
+.last_one img{
+    margin-top: 1%;
+}
+
+.word_thing img{
+    margin-top: 1%;
+}
+
+.whole_visual{
+    margin: 6% 0 0 0;
+}
+
+.animation_cover{
+    width: auto;
+    background-color: #fbfbfb;
+    margin: 2% auto;
+    text-align: center;
+    padding:4% 0;
+}
+
+
+.animation{
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* nav */
+.dropbtn{
+    background-color: #fff;
+}
+
+/** --openning-- **/
+/* Category_tags */
+.openning_tab{
+    color: #fff;
+    border-radius: 0.2em;
+    padding: 0.6% 1%;
+    font-size: 0.4em;
+    font-weight: lighter;
+    margin-left:2%;
+    align-self: center;
+    background-color:#7dd62c;
+}
+
+/* 大标题+简介+工具使用介绍  */
+.openning p{
+    width: 80%;
+    font-size: 1.1em;
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+/* 使用工具 */
+.tool{
+    display: flex;
+    margin-top: 2%;
+}
+
+.tool p{
+    width: auto;
+    margin-right: 2%;
+    align-self: center;
+}
+
+.tool img{
+    width: 2%;
+    margin-right: 1.6%;
+    align-self: flex-start;
+}
+
+/* -- 01目录 -- */
+/* 大图片 */
+.outline img{
+    /* margin-left: 10%; */
+    margin-top: 14%;
+    width: 100%;
+    z-index: 100;
+    border-radius: 0;
+}
+
+/* “目录”两个字 */
+.catalog_title{
+    min-width: 15%;
+    max-width: 15%;
+    font-size: 1.7em;
+    font-weight: 550;
+}
+
+.catalog_title :nth-child(1){
+    color: #7dd62c;
+    font-weight: 700;
+    margin: 0 8% 0 0;
+    border-left: 6px solid #7dd62c;
+}
+
+.catalog_title :nth-child(2){
+    color: #7dd62c;
+    font-weight: 550;  
+    margin-right: 10%;
+
+}
+
+/* 白色色块 */
+.catalogue{
+    margin-top: -20%;/*让白色可以走上去*/
+    padding-top: 24%;/*文字的真正padding-top要减去20%*/
+    padding-bottom: 4%;
+    background-color: #fff;
+}
+
+/* 整块文字目录（包括“目录”两个字的） */
+.catalogue ul{
+    padding-inline-start: 0;
+    display: flex;
+    list-style: none;
+    /* background-color: brown; */
+}
+
+.catalogue ul li{
+    /* background-color: khaki; */
+    margin-right: 6%;
+    flex: 0 1 23%;
+}
+
+/* “目录”右边的文字 */
+.another{
+    /* background-color: azure; */
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.another h2{
+    margin-top: 0;
+    margin-bottom: 2%;
+    align-self: flex-end;
+}
+
+.another a{
+    align-self: flex-end;
+    display: block;
+    text-decoration: none;
+    text-align: right;
+    font-size: 1em;
+    color: #3e3e3e;
+    margin: 6% 0 ;
+    padding: 4% 0; 
+    border-bottom: solid 1px #fff;
+    -moz-transiton: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.another a:hover{
+    border-bottom: solid 1px #7dd62c;
+}
+
+/* -- 02概述 -- */
+/* 02.1:左：三级标题，右：纯文字*/
+.left_title_right_word{
+    display: flex;
+    margin-top:10%;
+}
+
+.left_title_right_word .third_title{
+    margin-top: 0;
+    width: 18%;
+    align-items: flex-start;
+}
+
+.left_title_right_word .third_title span{
+    /* border-left: 6px solid #7dd62c; */
+    margin-right: 6%;
+}
+
+.left_title_right_word .third_title span img{
+    width: 7.3%;
+}
+
+
+.left_title_right_word .word{
+    margin-top: 0;
+    margin-left: 10%;
+    width: 80%;
+    line-height: 1.5;
+}
+
+/* 02.2，右：文字+图片*/
+.left_title_right_word .word img{
+    margin-right: 2%;
+    margin-top: 2%;
+    width: 30%;
+}
+
+/* -- 03交互设计 -- */
+/* 03.1 上文字，下大图 */
+.third_title {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin: 3% 0  1% 0 ;
+}
+
+.third_title span{
+    margin-right: 1%;
+    /* border-left: 6px solid #7dd62c; */
+}
+
+.third_title span img{
+    border-radius: 0;
+    width: 1.2%;
+}
+
+.word_big_pic {
+    margin-top: 10%; 
+}
+
+.word_big_pic img{
+    max-width:100%;
+    margin-top: 2%;
+}
+
+ /* 03.2 左图片右列举文字点 */
+ .l_pic_r_word,.l_word_r_pic{
+    display: flex;
+    height:auto;
+    margin-top: 8%;
+    justify-content: space-between;
+}
+
+ .l_pic_r_word img,.l_word_r_pic img{
+    width: 60%;
+    max-width: 100%;
+}
+
+.l_pic_r_word ul{
+    align-self: flex-start;
+    margin-top: 0;
+    width: 50%;
+    margin-left: 2%;
+}
+
+
+.l_pic_r_word .subheading,.l_word_r_pic .subheading{
+    display: block;
+    margin-bottom: 4%;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.l_pic_r_word ul li,.l_word_r_pic ul li{
+    margin-bottom: 8%;
+}
+
+/* 03.3 左列举文字，右图片 */
+.l_word_r_pic ul{
+    padding-left: 0%;
+    margin-right: 4%;
+}
+
+
+/* -- 04界面设计 -- */
+
+.whole{
+    margin: 10% 0;
+}
+
+.whole img{
+    margin-top: 1%;
+    max-width: 100%;
+}
+
+/* 04.2 界面一分析1 */
+.page1{
+    background-color:#F9F9F9;
+    display: flex;
+}
+
+.page1 img{
+    padding: 4%;
+    width:34%;
+    max-width:34%;
+}
+
+.page1 .content {    
+    padding: 6% 6% 6% 0  ;
+    margin-left: 6%;
+}
+
+/* 04.3 界面一分析2 */
+.page2{
+    background-color:#F9F9F9;
+    display: flex;
+}
+
+.page2 img{
+    padding: 4%;
+    width:34%;
+    max-width:34%;
+}
+
+.page2 .content {
+    padding: 6% 6% 6% 4%;
+}
+
+
+/* 作品集、文章的脚目录 */
+.end_nav{
+    display: flex;
+    justify-content: space-between;
+    padding:10% 0;
+}
+
+.end_nav .middle{
+    color: #3e3e3e;
+    text-decoration: none;
+    cursor: pointer;
+    align-self: center;
+    padding-bottom: 1%;
+    border-bottom: solid 2px #7dd62c;
+    -moz-transiton: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.middle:hover{
+    transform: scale(1.08);
+    border-bottom: solid 2px #7dd62c;
+}
+
+.previous,.next{
+    display: inline-flex;
+    width: 30%;
+    height: auto;
+    cursor: pointer;
+    text-decoration: none;
+    color: #3e3e3e;
+}
+
+.name h3{
+    margin-inline-start: 0;
+    width: 100%;
+    -moz-transiton: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.name h5{
+    margin-bottom: 3%;
+    -moz-transiton: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+
+}
+
+.end_nav .previous .line{
+    width: 30%;
+    max-width:20%;
+    margin-right: 8%;
+    height: 2px;
+    background-color:#7dd62c;
+    align-self: center;
+    -moz-transiton: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.end_nav .next .line{
+    width: 30%;
+    margin-left: 8%;
+    height: 2px;
+    background-color:#7dd62c;
+    align-self: center;
+    -moz-transiton: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.previous:hover .line,
+.next:hover .line{
+    transform: scaleX(0.8);
+}
+
+.previous:hover .name h3, 
+.next:hover .name h3{
+    transform: scale(1.1);
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+}
+
+.name .up{
+    font-size: 0.8em;
+}
+
+.next .text_right{
+    text-align: right;
+}
+
+/* --作品集、文章的版权-- */
+.artticle_footer .copyright{
+    margin: 0;
+    padding: 0 0 4%;
+}
+
+/* --手机尺寸显示的导航-- */
+.green{
+    display: none;
+}
+
+@media(min-width:1200px){
+    /*目录*/
+    .catalogue ul li{         
+        margin-right: 6%;
+        flex: 0 1 14%;
+    }
+
+    .catalog_title{
+        min-width: 12%;
+        max-width: 12%;
+        font-size: 1.8em;
+        font-weight: 550;
+    }
+}
+
+@media(min-width:1920px){
+    /*概述*/
+    .left_title_right_word{
+        margin-top: 4%;
+    }
+
+    /* 图片 */
+    .outline img{
+        margin-top: 11%;
+    }
+
+    /* 交互设计 */
+    .third_title{
+        margin: 4% 0 2%;
+    }
+
+    .word_big_pic{
+        margin-top: 0;
+    }
+
+    .l_pic_r_word{
+        margin-top: 6%;
+    }
+
+    /* 脚目录 */
+    .end_nav{
+        padding: 6% 0;
+    }
+}
+
+
+@media(max-width:480px){
+
+    /* extra */
+    .left_title_right_word .third_title span img{
+        width: 3.4%;
+    }
+
+
+    .left_title_right_word .third_title span{
+        margin-right: 1%;
+    }
+
+
+    .subtitle{
+        display: none;
+    }
+
+    .dropbtn{
+        background-color:#fcfcfc;
+        text-align: right;/*这是父div，让下面的img右对齐*/
+    }
+
+    /* openning */
+    .nor_title{
+        display:block;
+    }
+    
+    .openning_tab{
+        display: none;
+    }
+
+    .openning p{
+        width: 100%;
+        margin-top: 6%;
+    }
+
+    .tool{
+        display: none;
+    }
+
+    /* outline */
+    .outline img{
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+
+    }
+
+    /* 新增 */
+    .frist_one{
+        margin: 6% 0 10% 0;
+    }
+    
+    .frist_one img{
+        margin-top: 1%;
+    }
+    
+    .last_one{
+        margin: 10% 0 0% 0 ;
+    }
+    
+    .last_one img{
+        margin-top: 1%;
+    }
+
+    /* 任务概述的部分 */
+    .left_title_right_word .word{
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .left_title_right_word .word img{
+        width: auto;
+    }
+
+    .outline .catalogue{
+        display: none;
+    }
+
+    .left_title_right_word{
+        display: block;
+    }
+
+    .left_title_right_word .third_title{
+        width: auto;
+    }
+
+   
+
+    .l_pic_r_word, .l_word_r_pic{
+        display:none;
+    }
+
+    .third_title{
+        padding: 3% 0 3%;
+        color: #3e3e3e;
+        font-size: 1.2em;
+    }
+
+    .third_title span img{
+        width: 3.4%;
+        margin-right: 2%;
+    }
+
+    .page1,.page2{
+        display: block;
+    }
+
+    .page2 .content{
+        padding: 0;
+    }
+
+    .content p,.content .third_title,.end_nav{
+        display: none;
+    }
+
+    .page1 img,.page2 img{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .artticle_footer .copyright{
+        padding: 6% 0;
+    }
+
+    /* 手机尺寸才显示的导航 */
+    .green{
+        visibility: hidden;
+        position:fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color:#7dd62c;
+        text-align: center;
+    }
+
+    .green .regular{
+        margin: 10%;
+    }
+
+    .green .regular a{
+        color: #fff;
+        display: inline-block;
+        width: auto;
+        margin: 10% 10%;
+        padding: 2% 6%;
+        border-bottom: solid 1.4px #fff;
+        font-size: 1.3em;
+        text-decoration: none;
+    }
+
+    .green .close{
+        display: block;
+        margin-top: 16%;
+    }
+
+
+}

@@ -1,0 +1,496 @@
+body{
+    background-color: #f9f9f9;
+}
+
+/* 额外 */
+.top{
+    margin-top: 1%;
+}
+
+/*header*/
+/*需要更新global那张图片*/
+header{
+    width: 100%;
+    background: #fff;
+    height: auto;
+
+}
+
+header .header_whole{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-top: 4%;/*内边距增加每个块的间距*/
+}
+
+.header_whole .header_left{
+    align-self: flex-start;
+    height: 100%;
+    width: 100%;
+    padding-top: 4%;
+
+}
+
+.head_tittle{
+    font-size: 2em;
+    font-weight:600;
+    padding-top: 8%;
+}
+
+.head_brief{
+    margin:4% 0 2% 0 ;
+    font-size: 1.2em;
+    font-weight: 330;
+}
+
+.header_left a{
+    font-size: 1em;
+    margin-top: 8%;
+    min-width: 20%;
+    max-width: 22%;
+    display: block;
+    background-color: #7DD62C;
+    border-radius: 0.2em;
+    padding: 3% 4%;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.header_whole .header_right{
+    width: 0%;/*调整这里等于调整图片的padding*/
+}
+
+.header_right img{
+    max-width:90%;/*照片不定宽，父级定好宽度比，再加100%的max-width即可实现自适应*/
+    display: table-cell;/*让图片对齐div底部，先把它变成变成单元格表示。然后再用vertical向下对齐即可。*/
+    vertical-align: bottom;/**/
+}
+
+.a1{
+    width:80px;
+    background-color: #7DD62C;
+    padding :1% 3%;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.18em;
+    text-align: center; 
+    cursor:pointer;
+    margin-bottom: 4%;
+
+}
+
+
+/*section*/
+
+section{
+    width: 100%;
+}
+
+section  ul{
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+.tab li{
+    display: inline-block;
+    border: 0;
+    width: 8%;
+    font-size: 1.4em;
+    margin:12% 12% 2%;
+    color: #3e3e3e;
+    cursor: pointer;
+    padding-bottom: 1%;
+
+}
+
+.tab .active{
+    width: 8%;
+    border-bottom: solid 2.5px #7DD62C;
+}
+
+
+.section_whole .tab {
+    text-align: center;
+    margin: 0;
+}
+
+.card_list{
+    height: auto;
+}
+
+.card_list ul{
+    list-style: none;
+    display: flex;
+    display: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+
+}
+
+.card_list .show{
+    display: block;
+    display: flex;
+}
+.card_list ul li{
+    flex: 0 1 46%;
+    height: 100%;
+    background-color:#fff;
+    border-radius: 0.4em;
+    margin: 4% 0 0% 0;
+    transition: all 0.3s;
+}
+
+.card_list ul li a{
+    text-decoration: none;
+    color: #484848;
+}
+
+.card_list ul li img{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0.4em 0.4em 0 0;
+    transition: all 0.8s;
+}
+
+.card_list .card_thing{
+    padding:1em 1.2em 1.4em;
+    width: auto;
+    margin-top: 0;
+    border-radius: 0 0  0.4em 0.4em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card_list ul li:hover{
+    transform: scale(1.01);
+    box-shadow: 0 10px 20px  rgba(119, 119, 119, 0.09);
+}
+
+
+ .card_word :nth-child(1){
+    font-size: 1.18em;
+    font-weight: 550;
+    margin-bottom:0.4em;
+}
+
+.card_word :nth-child(2){
+    display:block;
+    font-size:0.9em;
+    font-weight:340;
+}
+
+.card_thing .card_t{
+    width: 20%;
+    max-width: 20%;
+    height: 100%;
+    line-height: 100%;
+    padding: 2% 0;
+    text-align: center;
+    font-size: 0.8em;
+    color: #fff;
+    background-color: pink;
+    border-radius: 0.24em;
+}
+
+/*footer*/
+
+footer .footer_whole{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+footer .g_line{
+    width: 3px;
+    height: 70px;
+    background-color: #7DD62C;
+    margin: 6% auto 3%;
+}
+
+.footer_whole p{
+    margin-bottom: 5%;
+    font-size: 1em;
+    color:#898989;
+
+}
+
+footer .plateform{
+    margin: 0 auto;
+    display: table-cell;
+    text-align: center;
+    display: flex;
+    justify-content:space-between;
+    width:65%;
+}
+
+.plateform a{
+    display:block;
+     width: auto; 
+     padding: 0;
+}
+
+
+.plateform  a img{
+    width: 70%;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.plateform a img:hover{
+    box-shadow: 0 10px 20px  rgba(119, 119, 119, 0.09);
+}
+
+/*各个屏幕适配*/
+@media(min-width:1200px){
+    .brand{
+        width:22%;
+        /* background-color: aquamarine; */
+    }
+
+    .lan{
+        width: 12%;
+        /* background-color: aquamarine; */
+        }
+    
+        .tab li{
+            margin:8% 12% 3%;
+        }
+    
+
+
+}
+
+@media(min-width:1920px){
+    .brand{
+        width:18%;
+    }
+
+    .lan{
+        width: 12%;
+        }
+    
+    .tab li{
+        margin:8% 12% 3%;
+    }
+
+    .btn_content .content_line{
+           width:72%;
+    }
+    
+    .head_tittle{
+        font-size: 2em;
+        font-weight:600;
+        }
+        
+    .head_brief{
+        margin:4% 0 4% 0;
+        font-size: 1.2em;
+        font-weight: lighter;
+        }    
+
+    .header_left a{
+        margin-bottom: 8%;
+        padding:3%;
+    }
+    
+    .header_whole .header_right{
+        width: 30%;/*调整这里等于调整图片的padding*/
+        }
+    
+    header .header_whole{
+        padding-top: 1%;/*内边距增加每个块的间距*/
+    }
+
+    footer .plateform{
+        width:66%;
+    }
+
+    .plateform img{
+        width: 100%;
+    }
+
+    .card_thing .card_t{
+        width: 10%;
+        font-size: 0.8em;
+    }
+
+    .card_list .card_thing{
+        padding:1.6em 1.2em 1.6em;
+        }
+}
+
+
+@media(max-width:480px){
+    /**总*/
+    .mar_whole{
+        margin:0 6% ;   
+    }
+
+    /*nav*/
+    .dropbtn span{
+        display: none;
+    }
+
+    .dropbtn .hide{
+        display: none;
+    }
+
+    .dropbtn{
+        background-color:#fff !important;
+        text-align: right;/*这是父div，让下面的img右对齐*/
+    }
+
+
+.nav_whole{
+    width:auto;
+    height:10%;
+}
+
+.brand{
+    width:60%;
+    max-width: 100%;
+    height:30%;
+    align-self: center;
+}
+
+
+.brand iframe{
+    max-width: 100%;
+    width: 68%;
+}
+ 
+.dropbtn{
+    background-color: #fff;
+    text-align: right;/*这是父div，让下面的img右对齐*/
+}
+
+.dropbtn img{
+    width: 48%;
+    height: 48%;
+}
+
+/* header */
+header .header_whole{
+    padding-top:18%;
+    padding-bottom: 8%;
+}
+
+.header_whole .header_left{
+    padding-top: 0%;
+}
+
+.header_right{
+    display: none;
+}
+
+
+.head_tittle{
+    font-size: 1.8em;
+    font-weight:600;
+    margin-top: 0;
+}
+
+.head_brief{
+    width: 90%;
+    line-height: 1.4;
+}
+
+.header_whole .header_left{
+    width: auto;
+    align-self: center;
+}
+
+.head_brief .phone_d{
+    font-weight: 300;
+    background-color:  #7DD62C;
+    color: #fff;
+}
+
+
+.header_left a{
+    min-width: 40%;
+    font-size: 1em;
+    padding: 6%;
+}
+
+.header_left a{
+    width:8%;
+    max-width: 8%;
+    padding: 5% 0;
+    margin-bottom: 15%;
+
+}
+
+/* section */
+.tab li{
+    width: 20%;
+    font-size: 1.3em;
+    padding-bottom: 2%;
+    font-weight: 500;
+}
+
+.tab .active{
+    width: 20%;
+    border-bottom: solid 3px #7DD62C;
+}
+
+.card_list ul{
+    margin-top: 4%;
+}
+
+.card_list ul li{
+    flex: 0 1 100%;
+    margin:6% 0;
+}
+
+.card_thing .card_t{
+    font-size: 12px;
+    font-family: 'Roboto';
+}
+
+/* footer */
+
+.footer_whole p{
+    margin-bottom: 16%;
+    font-size: 1em;
+    color:#898989;
+
+}
+
+.copyright{
+    font-size: 0.2em;
+    color: #d5d5d5;
+    font-weight: 0.2em;
+    margin: 14% 0 6% !important;
+}
+
+
+footer .plateform{
+    width: 90%;
+}
+
+footer .g_line{
+    margin: 6% auto 8%;
+}
+
+
+.plateform a img{
+    width: 60%;
+}
+
+@media(max-width:320px){
+    .card_thing .card_t{
+        display: none;
+    }
+
+}
+}

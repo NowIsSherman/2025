@@ -1,0 +1,353 @@
+/*全局*/
+a{text-decoration:none;
+}
+
+h4{ margin: 2% 0 0 0;
+}
+/* 额外 */
+.first_one{
+    margin-top: 3%;
+}
+
+.normal{
+    margin-top: 6%;
+}
+
+/* --导航，改了语言的颜色-- */
+.dropbtn{
+    background-color:#fff;
+}
+
+
+.nor_title{
+    margin-bottom: 2%;
+}
+
+.openning p{
+    font-size: 1.1em;
+    margin:5% 0 3% 0;
+}
+
+/* --封面-- */
+.cover img{
+    border-radius: 0;
+    margin-top: 14%;
+}
+
+/* --文章目录+文章-- */
+.article{
+    width:80%;
+    margin-top: 2%;
+    position: relative;
+}
+
+/* 文章目录 */
+.outer{
+    position: absolute;
+    top: 0;
+    bottom: unset;
+    float: left;
+    overflow: hidden;
+    background-color:#fff;
+    width: 20%;
+    padding-inline-start:0;
+    list-style-position: inside;
+    padding: 2%;
+    max-height: 500px;
+    overflow-y: scroll;
+
+}
+
+.outer::-webkit-scrollbar{
+    width: 3px;
+    background-color: #fff;
+}
+
+.outer::-webkit-scrollbar-thumb{
+    background-color: #7dd62c;
+}
+
+.outer::-webkit-scrollbar-button{
+    height: 10px;
+    background-color:#fff;
+}
+
+.inner_catalogue h3{
+    margin-top: 2%;
+}
+
+
+.terms a{
+    text-decoration: none;
+    color: #3e3e3e;
+    width: max-content;
+}
+
+.terms h4{
+    margin-block-end:2%;
+    padding: 2% 0;
+}
+
+
+.inner_catalogue .terms{
+    padding-inline-start:0;
+    margin: 0 0 12% 0;
+    list-style-type: none;
+}
+
+.terms h3{
+    margin-bottom: 4%;
+}
+
+
+.terms li{
+    font-size: 14px;
+    color: #888989;
+    padding: 2% 0 2% 0;
+    margin: 0 0 0 0 ;
+}
+
+.terms li:hover, .terms a:hover, .terms h4:hover{
+    color: #6DC41E;
+    background-color:#F2FFE6;
+}
+
+
+.green{
+    display: none;
+}
+
+/* 文章 */
+.paragraph{
+    margin-left: 22%;
+    background-color:#fff;
+    padding: 2% 2% 2% 3%;
+    margin-bottom: 2%;
+}
+
+.paragraph_subsection{
+    padding-inline-start:0;
+    list-style-position: inside;
+    list-style: none;
+}
+
+.paragraph_subtitle{
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.paragraph_subsection img{
+    margin-top: 2%;
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* --作品集、文章的脚目录-- */
+.end_nav{
+    display: flex;
+    justify-content: space-between;
+    padding:10% 0;
+}
+
+.end_nav .middle{
+    text-decoration: none;
+    cursor: pointer;
+    align-self: center;
+    padding-bottom: 1%;
+    border-bottom: solid 2px #7dd62c;
+    -moz-transiton: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    color: #3e3e3e;
+}
+
+.middle:hover{
+    transform: scale(1.08);
+    border-bottom: solid 2px #7dd62c;
+}
+
+.previous,.next{
+    display: inline-flex;
+    width: 30%;
+    height: auto;
+    cursor: pointer;
+}
+
+.name h3{
+    margin-inline-start: 0;
+    width: 100%;
+    -moz-transiton: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.name h5{
+    margin-bottom: 3%;
+    -moz-transiton: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    text-decoration: none;
+
+}
+
+.end_nav .previous .line{
+    width: 30%;
+    max-width:20%;
+    margin-right: 8%;
+    height: 2px;
+    background-color:#7dd62c;
+    align-self: center;
+    -moz-transiton: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.end_nav .next .line{
+    width: 30%;
+    margin-left: 8%;
+    height: 2px;
+    background-color:#7dd62c;
+    align-self: center;
+    -moz-transiton: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.previous:hover .line,
+.next:hover .line{
+    transform: scaleX(0.8);
+}
+
+
+
+.previous:hover .name h3, 
+.next:hover .name h3{
+    transform: scale(1.1);
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+}
+
+.previous,.next{
+    text-decoration: none;
+}
+
+.name .up{
+    font-size: 0.8em;
+    color: #3e3e3e;
+}
+
+.name h3{
+    color: #3e3e3e;
+}
+
+.next .text_right{
+    text-align: right;
+}
+
+
+@media(min-width:1920px){
+    .cover img{
+        margin-top: 11%;
+    }
+}
+
+/* --作品集、文章的版权-- */
+.artticle_footer .copyright{
+    margin: 0;
+    padding: 0 0 4%;
+}
+
+@media(max-width:480px){
+    /* 额外 */
+    .normal{
+        margin-top: 8%;
+    }
+
+    /* 隐藏模块—— 侧边固定栏、底部导航 */
+    .outer, .end_nav{
+        display: none;
+    }
+
+    /* 导航 */
+    .dropbtn{
+        background-color: #fcfcfc;
+    }
+
+    /* 文章侧边栏和文章 */
+    .article{
+        width:auto;
+    }
+
+    .outer{
+        float: none;
+    }
+
+    .paragraph{
+        margin-left: 0;
+        width:auto;
+        background-color: #fcfcfc;
+    }
+
+    .paragraph_subsection img{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .openning p{
+        font-size: 1.1em;
+        margin:10% 0 2% 0;
+    }
+        /* 手机尺寸才显示的导航 */
+    .green{
+        visibility: hidden;
+        position:fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color:#7dd62c;
+        text-align: center;
+    }
+
+    .green .regular{
+        margin: 10%;
+    }
+
+    .green .regular a{
+        color: #fff;
+        display: inline-block;
+        width: auto;
+        margin: 10% 10%;
+        padding: 2% 6%;
+        border-bottom: solid 1.4px #fff;
+        font-size: 1.6em;
+        text-decoration: none;
+    }
+
+    .green .close{
+        display: block;
+        margin-top: 22%;
+    }
+    .green .close{
+        display: block;
+        margin-top: 22%;
+    }
+
+    /* 底部导航 */
+    .copyright{
+        background-color: #fcfcfc;
+    }
+
+
+
+
+}
