@@ -64,7 +64,8 @@ h3,h5{
 
 .nav_right{
     display: flex;
-    line-height: 40px;
+    align-items: center;    /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
     text-align: center;
 
 }
@@ -82,7 +83,7 @@ h3,h5{
 
 .brand img{
     max-width: 100%;
-    width: 84%;
+    width: 70%;
     height: 10%; 
     border-radius: 0;
     transition: 200ms;
@@ -109,8 +110,9 @@ h3,h5{
     background-color:#fcfcfc;
     padding: 10% 2%; /*padding决定整个btn有多大*/
     cursor: pointer;
-    border: 0;
-    border-radius: 0.2em; 
+    border: 1em;
+    border-color: #8f8f8f;
+    border-radius: 2em; 
     font-size: 16px;
     outline: none;
     cursor:pointer;
@@ -308,7 +310,7 @@ h3,h5{
     }
 
     .card_thing .card_t{
-        width: 10%;
+        width: 16%;
     }
 
     .card_list .card_thing{
