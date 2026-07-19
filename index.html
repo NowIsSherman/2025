@@ -30,7 +30,7 @@
           <a href="aboutme.html"class="re">关于我</a>
         <div class="lan">
           <button class="dropbtn">
-            <img src="pic_index/Bitmap.png" height="16.6px">
+            <img src="pic_index/Bitmap.png" height="18px">
             <span class="hide">中文&nbsp;</span>
             <img  class="hide" src="pic_index/Triangle.png" height="8px">
           </button>
@@ -58,6 +58,7 @@
   </header>
 
   <!-- profiles and article -->
+
   <section>
     <div class="section_whole mar_whole">
       <!-- <ul class="tab">
@@ -67,8 +68,10 @@
 
       <div class="card_list top">
         <ul class="show">
-                   <li>
-            <a href="https://mp.weixin.qq.com/s/7tTs8On5BYfGZRB6_6a8vA">
+             <li>
+             <!-- project-card用于给GA4记录内容；data-project则是传值到 -->
+            <a href="https://mp.weixin.qq.com/s/7tTs8On5BYfGZRB6_6a8vA" target="_blank" rel="noopener noreferrer" 
+               class="project-card" data-project="database_backup">
              <img src="pic_index/index_cover_bak.png" alt="">
              <div class="card_thing" >
                <div class="card_word">
@@ -81,7 +84,8 @@
           </li>
         
              <li>
-            <a href="https://www.zcool.com.cn/work/ZNjcyMzkwMTY=.html">
+            <a href="https://www.zcool.com.cn/work/ZNjcyMzkwMTY=.html" target="_blank" rel="noopener noreferrer"
+               class="project-card" data-project="nova">
              <img src="pic_index/helio/helio_index_cover.png" alt="">
              <div class="card_thing" >
                <div class="card_word">
@@ -93,7 +97,8 @@
             </a>
           </li>
           <li>
-            <a href="jxg.html">
+            <a href="jxg.html" target="_blank" rel="noopener noreferrer"
+               class="project-card" data-project="jxg">
              <img src="pic_index/index_cover_elng.png" alt="">
              <div class="card_thing" >
                <div class="card_word">
@@ -106,7 +111,8 @@
           </li>
 
           <li>
-            <a href="plane_maintenance.html">
+            <a href="plane_maintenance.html" target="_blank" rel="noopener noreferrer"
+              class="project-card" data-project="air_plane_maintenance">
              <img src="pic_index/index_cover_yjw.png" alt="">
              <div class="card_thing" >
                <div class="card_word">
@@ -119,7 +125,8 @@
           </li>
         
          <li>
-          <a href="cbhk.html">
+          <a href="cbhk.html" target="_blank" rel="noopener noreferrer"
+              class="project-card" data-project="cbhk">
            <img src="pic_index/index_cover_hkck.png" alt="">
            <div class="card_thing" >
              <div class="card_word">
@@ -132,7 +139,8 @@
          </li>
 
         <li>
-          <a href="hmi.html">
+          <a href="hmi.html" target="_blank" rel="noopener noreferrer"
+           class="project-card" data-project="HMI">
            <img src="pic_index/index_hmi_hmi.png" alt="">
            <div class="card_thing" >
              <div class="card_word">
@@ -268,58 +276,104 @@
           <img src="pic_index/zcool.svg" alt="">
         </a>
         </div>
-       <div class="copyright" id="footer"><span>© HOLIDAY 2024</span>&nbsp; &nbsp; Design And Code By HOLIDAY</div>
+       <div class="copyright" id="footer"><span>© CleoWoo 2026</span>&nbsp; &nbsp; Design And Code By CleoWoo + AI</div>
       </div>
     </footer>
 
     <script>
-      var tabs = document.getElementsByClassName("tab")[0].getElementsByTagName("li");
-      var contents = document.getElementsByClassName("card_list")[0].getElementsByTagName("ul");
-      var en = document.querySelector('.en');
-      //for循环绑定点击事件
-      for(i=0; i<tabs.length; i++){
-        tabs[i].onmouseover = function(){
-           //tab的切换
-           for(i=0; i<tabs.length; i++){
-            tabs[i].className = "";
-            this.className = "active";
-           }
 
-          //卡片的切换
-           for(var i = 0; i < contents.length; i++){
-            contents[i].className = ""
-          }
+// Tab 切换功能（保留，以后恢复作品/文章 Tab 时可直接使用）
+// =========================
 
-          if(this.innerText == "作品"){
-            contents[0].className = "show";
+// 在整个网页中查找 class="tab" 的元素
+// 如果首页没有 .tab，则 tabContainer = null
+const tabContainer = document.querySelector('.tab');
 
-          }
-          if(this.innerText == "文章"){
-            contents[1].className = "show";
-          }
-        
-        }
+// 判断页面是否存在 .tab
+// 如果不存在，就跳过整个 Tab 功能，避免 JavaScript 报错
+if (tabContainer) {
+
+  // 获取 Tab 里面所有的 li（例如：作品、文章）
+  const tabs = tabContainer.querySelectorAll('li');
+
+  // 获取 card_list 里面所有 ul（作品列表、文章列表）
+  const contents = document.querySelectorAll('.card_list > ul');
+
+  // 给每个 Tab 添加鼠标移入事件
+  tabs.forEach(function(tab){
+
+    tab.addEventListener('mouseover', function(){
+
+      // 先移除所有 Tab 的 active 状态
+      tabs.forEach(function(item){
+        item.classList.remove('active');
+      });
+
+      // 给当前鼠标移到的 Tab 添加 active
+      this.classList.add('active');
+
+      // 先隐藏所有内容区域
+      contents.forEach(function(content){
+        content.classList.remove('show');
+      });
+
+      // 如果鼠标移到"作品"
+      // 显示第一个 ul（作品）
+      if(this.innerText === "作品"){
+        contents[0].classList.add('show');
       }
-      //poping up alert after clicking en 
-      function ale(){
-        alert('抱歉，还在整理作品中，之后在开放哦～')
+
+      // 如果鼠标移到"文章"
+      // 显示第二个 ul（文章）
+      if(this.innerText === "文章"){
+        contents[1].classList.add('show');
       }
 
-      // GA4 project click tracking
-    document.querySelectorAll('.card_list a').forEach(function(card) {
-
-    card.addEventListener('click', function() {
-
-    const projectName = this.getAttribute('href').replace('.html', '');
-
-    gtag('event', 'project_click', {
-      project_name: projectName
     });
 
   });
 
-});
+}
 
+// 其它功能
+// =======================
+
+// 获取英文切换按钮（目前保留，后续功能可继续使用）
+const en = document.querySelector('.en');
+
+// 点击英文按钮弹窗（目前未启用）
+function ale(){
+    alert('抱歉，还在整理作品中，之后再开放哦～');
+}
+
+// Google Analytics 4 埋点
+// 功能：统计首页每个作品卡片被点击多少次
+// =========================
+
+// 获取所有作品卡片（HTML 中需要有 class="project-card"）
+document.querySelectorAll('.project-card').forEach(function(card){
+
+    // 给每张卡片添加点击事件
+    card.addEventListener('click', function(){
+
+        // 向 Google Analytics 发送一个自定义事件
+        gtag('event', 'project_click', {
+
+            // project_name 为自定义参数
+            // 值来自 HTML 中的 data-project
+            // 例如：
+            // data-project="jxg"
+
+            // GA4 收到的数据：
+            // Event Name : project_click
+            // project_name : jxg
+            project_name: this.dataset.project
+
+        });
+
+    });
+
+});
     </script>
 </body>
 </html>

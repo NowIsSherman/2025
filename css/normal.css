@@ -106,15 +106,15 @@ h3,h5{
 
 .dropbtn{
     width:120px;
-    max-width: 120px;
-    background-color:#fcfcfc;
-    padding: 10% 2%; /*padding决定整个btn有多大*/
-    cursor: pointer;
-    border: 1em;
-    border-color: #8f8f8f;
-    border-radius: 2em; 
-    font-size: 16px;
-    outline: none;
+    background:#f9f9f9;
+    display:flex;
+    align-items:center;      /* 所有子元素上下居中 */
+    justify-content:center;  /* 整体水平居中 */
+    padding:10px 8px;
+    gap:6px;                 /* 三个元素之间的距离 */
+    border: none;
+    border-radius:0.4em;
+    font-size:16px;
     cursor:pointer;
 }
 
@@ -138,14 +138,18 @@ h3,h5{
 }
 
 .btn_content a{
-    display: block;
-    align-self: center;
+    display: flex;
+    align-items: center;      /* 垂直居中 */
+    justify-content: center;  /* 水平居中，如果想左对齐可以删掉 */
+    width: 120px;
+    height: 40px;
     color: #3e3e3e;
+    border-radius:0.4em;
     text-decoration: none;
+    
 }
 
 .lan:hover .btn_content{
-    display: block;
     display: flex;
     border-radius: 0 0 0.2em 0.2em;
 }
