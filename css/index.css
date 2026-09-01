@@ -140,6 +140,7 @@ section  ul{
 .card_list ul li{
     flex: 0 1 46%;
     height: 100%;
+    min-width: 0; /* ← 新增：防防止英文把整张卡片撑宽 */
     background-color:#fff;
     border-radius: 0.4em;
     margin: 4% 0 0% 0;
@@ -163,9 +164,11 @@ section  ul{
     width: auto;
     margin-top: 0;
     border-radius: 0 0  0.4em 0.4em;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    align-items:center; /* 让文字区域和标签在垂直方向居中对齐 */
+    display: flex; /* 使用 Flex 布局，让左侧文字和右侧标签横向排列 */
+    justify-content: space-between; /* 左右元素分别靠两侧排列 */
+    flex-wrap: nowrap;
+    gap: 1em; /* 设置左侧文字与右侧标签之间的间距 */
 }
 
 .card_list ul li:hover{
@@ -173,6 +176,21 @@ section  ul{
     box-shadow: 0 10px 20px  rgba(119, 119, 119, 0.09);
 }
 
+.card_word{
+  flex: 1; /* 占据除右侧标签以外的剩余空间 */
+  min-width: 0; /* 允许文字区域缩小，使超出文字显示省略号 */
+}
+
+    .card_description {
+    display: block; /* 将span变成块级元素，使宽度设置生效 */
+    width: 100%; /* 占满左侧文字区域的可用宽度 */
+    overflow: hidden; /* 隐藏超出元素宽度的文字 */
+    white-space: nowrap; /* 禁止文字换行，始终只显示一行 */
+    text-overflow: ellipsis; /* 超出部分使用省略号显示 */
+    font-size: 0.9em; /* 描述字号为父元素字号的0.9倍 */
+    font-weight: 340; /* 设置描述文字的字体粗细 */
+    cursor: default; /* 鼠标移入时保持默认箭头样式 */
+}
 
  .card_word :nth-child(1){
     font-size: 1.18em;
@@ -189,7 +207,7 @@ section  ul{
 .card_thing .card_t{
     width: 20%;
     max-width: 20%;
-    height: 100%;
+    height: auto;
     line-height: 100%;
     padding: 2% 0;
     text-align: center;
